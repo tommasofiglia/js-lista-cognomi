@@ -11,7 +11,24 @@ var inputLastName = prompt("Inserisci il tuo cognome") ;
 var lastNameCap = inputLastName.charAt(0).toUpperCase() + inputLastName.slice(1)
 
 //Creazione dell'array e disposizione dei cognomi in ordine alfabetico attraverso .sort()
-var listLastName = [ "Bianchi", "Rossi", "Duzioni", "Balsano", "Verdi", lastNameCap ]
+var listLastName = [
+  "Bianchi",
+  "Rossi",
+  "Duzioni",
+  "Balsano",
+  "Verdi",
+  lastNameCap
+];
+
 listLastName.sort();
 
-console.log(listLastName);
+// Creazione del ciclo for per la creazione della Lista
+for (var i = 0; i < listLastName.length; i++) {
+  listElement = listLastName[i];
+
+  var listItem = document.getElementById('lista-cognomi').innerHTML;
+  document.getElementById('lista-cognomi').innerHTML = listItem + "<li>" + listElement + "</li>"
+
+
+
+}
