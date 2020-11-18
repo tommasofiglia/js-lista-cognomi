@@ -27,11 +27,12 @@ for (var i = 0; i < listLastName.length; i++) {
   listElement = listLastName[i];
 
   var orderElement = listLastName.indexOf(lastNameCap);
-  document.getElementById('position-number').innerHTML = orderElement + 1;
 
   var listItem = document.getElementById('lista-cognomi').innerHTML;
-  document.getElementById('lista-cognomi').innerHTML = listItem + "<li>" + listElement + "</li>"
+  document.getElementById('lista-cognomi').innerHTML = listItem + "<li>" + listElement + "</li>";
 
-
-
+  //Faccio apparire il resto degli elementi in html solo dopo l'inserimento del cognome
+   
+  document.getElementById('titolo').innerHTML = "Lista cognomi";
+  document.getElementById('messaggio-finale').innerHTML = "Il tuo cognome è nella posizione numero" + " " + (orderElement + 1) + " " + "della lista";
 }
