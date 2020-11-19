@@ -17,9 +17,8 @@ var listLastName = [
   "Duzioni",
   "Balsano",
   "Verdi",
-  lastNameCap
 ];
-
+listLastName.push(lastNameCap);
 listLastName.sort();
 
 // Creazione del ciclo for per la creazione della Lista
@@ -32,7 +31,7 @@ for (var i = 0; i < listLastName.length; i++) {
   document.getElementById('lista-cognomi').innerHTML = listItem + "<li>" + listElement + "</li>";
 
   //Faccio apparire il resto degli elementi in html solo dopo l'inserimento del cognome
-   
+
   document.getElementById('titolo').innerHTML = "Lista cognomi";
   document.getElementById('messaggio-finale').innerHTML = "Il tuo cognome è nella posizione numero" + " " + (orderElement + 1) + " " + "della lista";
 }
